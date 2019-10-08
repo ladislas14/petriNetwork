@@ -6,41 +6,37 @@ package Node;
 import java.util.List;
 
 import Arc.Arc;
+import Exception.RemoveTokenException;
 
 
 public class Place implements INode{
 	
-	/** The tokens. */
 	private List<Token> tokens;
 	
-	/**
-	 * Instantiates a new place.
-	 */
-	public Place() {
-		
+
+	public Place(List<Token> tokens) {
+		this.tokens = tokens;
 	}
 	
-	// Methods
 	
 	public List<Token> getToken(){
 		return this.tokens;
 	}
 	
-	/**
-	 * @return the token number
-	 */
+	
 	public int getTokenNumber() {
 		return this.getToken().size();
 	}
 	
-	/**
-	 * Removes the tokens.
-	 */
-	public void removeTokens(int n) {
-		if (this.getTokenNumber() >= n) {
+
+	public void removeTokens(int n) throws RemoveTokenException {
+		try {
+			
 			for(int i=0; i<n; i++ ) {
 				this.getToken().remove(0);
 			}
+		} catch (RemoveTokenException stop) {
+			
 		}
 	}
 
