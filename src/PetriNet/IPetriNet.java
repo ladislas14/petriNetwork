@@ -12,6 +12,8 @@ import Arc.ArcSortant;
 import Node.Place;
 import Node.Transition;
 
+import java.util.List;
+
 /**
  * The Interface IPetriNet.
  * 
@@ -38,7 +40,7 @@ public interface IPetriNet {
 	 *
 	 * @param transition the transition
 	 */
-	public Transition newTransition(ArcEntrant arcEntrant, ArcSortant arcSortant);
+	public Transition newTransition(List<ArcEntrant> arcEntrants, List<ArcSortant> arcSortants);
 	
 	/**
 	 * Adds the arc.

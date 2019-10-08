@@ -26,8 +26,8 @@ public class PetriNet implements IPetriNet{
 	}
 
 	@Override
-	public Transition newTransition(ArcEntrant arcEntrant, ArcSortant arcSortant) {
-		return new Transition(arcEntrant, arcSortant);
+	public Transition newTransition(List<ArcEntrant> arcEntrants, List<ArcSortant> arcSortants) {
+		return new Transition(arcEntrants, arcSortants);
 	}
 
 	@Override
