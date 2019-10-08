@@ -1,3 +1,5 @@
 /bin/
 .DS_Store
 .settings/
+.idea/
+/TD1_Petri_Network.iml
