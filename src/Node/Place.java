@@ -30,14 +30,17 @@ public class Place implements INode{
 	
 
 	public void removeTokens(int n) throws RemoveTokenException {
-		try {
 			
-			for(int i=0; i<n; i++ ) {
-				this.getToken().remove(0);
+			if (this.getToken().size()<= n) {
+				
+				for(int i=0; i<n; i++ ) {
+					this.getToken().remove(0);
+				}
+				
+			}else {
+				throw new RemoveTokenException();
 			}
-		} catch (RemoveTokenException stop) {
-			
-		}
+
 	}
 
 	public List<Arc> getArcs() {
