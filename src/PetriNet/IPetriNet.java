@@ -7,6 +7,8 @@
 package PetriNet;
 
 import Arc.Arc;
+import Arc.ArcEntrant;
+import Arc.ArcSortant;
 import Node.Place;
 import Node.Transition;
 
@@ -36,7 +38,7 @@ public interface IPetriNet {
 	 *
 	 * @param transition the transition
 	 */
-	public Transition newTransition();
+	public Transition newTransition(ArcEntrant arcEntrant, ArcSortant arcSortant);
 	
 	/**
 	 * Adds the arc.
