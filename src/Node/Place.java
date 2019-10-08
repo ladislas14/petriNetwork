@@ -3,6 +3,7 @@
  */
 package Node;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Arc.Arc;
@@ -42,7 +43,20 @@ public class Place implements INode{
 			}
 
 	}
+	
+	public void addTokens(int n){
+		
+		List<Token> addList = new ArrayList<Token>();		
+		
+		for(int i=0; i<n; i++) {
+			Token tempToken = new Token(this);
+			addList.add(tempToken);
+		}
 
+		this.getToken().addAll(addList);
+	}
+	
+	
 	public List<Arc> getArcs() {
 		// TODO Auto-generated method stub
 		

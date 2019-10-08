@@ -6,26 +6,19 @@ package Node;
 
 public class Token {
 	
-	/** The place. */
 	private Place place;
 	
-	/**
-	 * Instantiates a new token.
-	 */
-	public Token() {
-		
+
+	public Token(Place place) {
+		this.place = place;
 	}
+
 	
-	/**
-	 * Gets the place.
-	 */
 	public Place getPlace() {
 		return this.place;
 	}
 	
-	/**
-	 * Sets the place.
-	 */
+	
 	public void setPlace(Place place) {
 		this.place = place;
 	}
