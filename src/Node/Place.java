@@ -7,16 +7,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Arc.Arc;
+import Arc.ArcEntrant;
+import Arc.ArcSortant;
 import Exception.RemoveTokenException;
 
 
 public class Place implements INode{
 	
 	private List<Token> tokens;
+	private ArcEntrant arcEntrant;
+	private ArcSortant arcSortant;
 	
 
-	public Place(List<Token> tokens) {
+	public Place(List<Token> tokens, ArcEntrant arcEntrant, ArcSortant arcSortant) {
 		this.tokens = tokens;
+		this.arcEntrant = arcEntrant;
+		this.arcSortant = arcSortant;
 	}
 	
 	
@@ -59,7 +65,9 @@ public class Place implements INode{
 	
 	public List<Arc> getArcs() {
 		// TODO Auto-generated method stub
-		
-		return null;
+		List<Arc> arcs = new ArrayList<Arc>();
+		arcs.add(this.arcEntrant);
+		arcs.add(this.arcSortant);
+		return arcs;
 	}
 }

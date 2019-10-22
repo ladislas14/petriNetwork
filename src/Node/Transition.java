@@ -3,7 +3,10 @@
  */
 package Node;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.lang.model.element.NestingKind;
 
 import Arc.Arc;
 import Arc.ArcEntrant;
@@ -55,11 +58,11 @@ public class Transition implements INode{
 	}
 
 	public List<ArcEntrant> getArcEntrants() {
-		return arcEntrants;
+		return this.arcEntrants;
 	}
 
 	public List<ArcSortant> getArcSortants() {
-		return arcSortants;
+		return this.arcSortants;
 	}
 
 	/* (non-Javadoc)
@@ -67,6 +70,9 @@ public class Transition implements INode{
 	 */
 	public List<Arc> getArcs() {
 		// TODO Auto-generated method stub
-		return null;
+		List<Arc> arcs = new ArrayList<Arc>();
+		arcs.addAll(this.getArcEntrants());
+		arcs.addAll(this.getArcSortants());
+		return arcs;
 	}
 }
